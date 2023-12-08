@@ -1,0 +1,19 @@
+1:
+  "message": "'Главное меню'"
+  "static_buttons":
+    "Создать поездку": 
+      "new_state": 11
+    "Показать поездки": 
+      "new_state": 12
+
+11:
+  "message": "'Введите дату поездки'"
+  "static_buttons":
+    "⬅": 
+      "new_state": 1
+
+12:
+  "message": "'Список поездок'"
+  "static_buttons":
+    "⬅": 
+      "new_state": 1
