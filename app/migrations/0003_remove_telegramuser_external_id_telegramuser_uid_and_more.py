@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('tb', '0002_telegramuser_context'),
+        ('app', '0002_telegramuser_context'),
     ]
 
     operations = [

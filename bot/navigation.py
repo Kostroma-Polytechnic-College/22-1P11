@@ -1,13 +1,13 @@
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from yaml import Loader, load
 import os
-from tb.models import *
+from app.models import *
 from datetime import timezone as tz
 from datetime import datetime as dt
 from datetime import timedelta as td
 
 MENU = load(open(
-    os.path.join(os.getcwd(), 'tb', 'management', 'commands', 'navigation.yml'), 
+    os.path.join(os.getcwd(), 'bot', 'navigation.yml'), 
     'r', encoding='utf-8'), Loader=Loader)
 
 def get_static_buttons(context: dict):

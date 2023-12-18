@@ -1,5 +1,5 @@
 from django.contrib.admin import ModelAdmin, register
-from tb.models import *
+from app.models import *
 
 @register(TelegramUser)
 class TelegramUserAdmin(ModelAdmin):
