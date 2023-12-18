@@ -1,10 +1,13 @@
 1:
   "message": "'Главное меню'"
-  "static_buttons":
-    "Создать поездку": 
+  "conditional_buttons":
+    "Создать поездку":
       "new_state": 11
+      "condition": "TelegramUser.objects.get(uid={user_id}).is_admin == True"
+  "static_buttons":
     "Показать поездки": 
       "new_state": 12
+
 
 11:
   "message": "'Введите дату поездки'"
@@ -14,6 +17,11 @@
 
 12:
   "message": "'Список поездок'"
+  "dynamic_buttons":
+    "new_state": 1
+    "query": "Travel.objects.filter(end_datetime__gt=dt.now(tz=tz(td(hours=3))))"
+    "field": "__str__()"
+    "id_arg": "travel_id"
   "static_buttons":
     "⬅": 
       "new_state": 1

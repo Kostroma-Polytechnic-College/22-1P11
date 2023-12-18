@@ -3,6 +3,7 @@
 import os
 import sys
 
+os.environ["DJANGO_ALLOW_ASYNC_UNSAFE"] = "true"
 
 def main():
     """Run administrative tasks."""
